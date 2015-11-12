@@ -1,13 +1,13 @@
 # cordova-helloworld
 com-rockeycai-cordova-helloworld
 
-//  add  plugin
+//添加插件  add  plugin
 cordova plugin add https://github.com/huqiji/cordova-helloworld.git
 
-//  remove  plugin
+//删除插件  remove  plugin
 cordova plugin remove com-rockeycai-cordova-helloworld
 
-//
+//使用方法
 $(document).on("pageinit", "#pageone", function () {
 
     //saveHello
