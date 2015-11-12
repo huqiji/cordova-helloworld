@@ -1,10 +1,10 @@
 # cordova-helloworld
 com-rockeycai-cordova-helloworld
 
-//添加插件  add  plugin
+//添加插件
 cordova plugin add https://github.com/huqiji/cordova-helloworld.git
 
-//删除插件  remove  plugin
+//删除插件
 cordova plugin remove com-rockeycai-cordova-helloworld
 
 //使用方法
