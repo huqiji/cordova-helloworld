@@ -1,9 +1,13 @@
 # cordova-helloworld
 com-rockeycai-cordova-helloworld
 
+//  add  plugin
+cordova plugin add https://github.com/huqiji/cordova-helloworld.git
 
+//  remove  plugin
+cordova plugin remove com-rockeycai-cordova-helloworld
 
-
+//
 $(document).on("pageinit", "#pageone", function () {
 
     //saveHello
