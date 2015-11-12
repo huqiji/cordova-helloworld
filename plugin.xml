@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com-rockeycai-cordova-helloworld"
+    version="0.0.1">
+    <name>RockeyCaiHelloWorld</name>
+    <description>RockeyCai HelloWorld Cordova Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,RockeyCaiHelloWorld</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+    <js-module src="www/rockeycaihelloworld.js" name="RockeyCaiHelloWorld">
+    	<clobbers target="RockeyCaiHelloWorld" />
+    </js-module>
+
+    <html-module src="www/helloworld.html" name="RockeyCaiHelloWorld">
+    	<clobbers target="RockeyCaiHelloWorld" />
+    </html-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="RockeyCaiHelloWorld">
+                <param name="ios-package" value="RockeyCaiHelloWorld" onload="true" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/RockeyCaiHelloWorld.h" />
+        <source-file src="src/ios/RockeyCaiHelloWorld.m" />
+        <source-file src="www/helloworld.html" target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>
+    </platform>
+
+</plugin>
