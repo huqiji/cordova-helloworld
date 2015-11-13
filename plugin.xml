@@ -36,8 +36,8 @@
 
         <header-file src="src/ios/RockeyCaiHelloWorld.h" />
         <source-file src="src/ios/RockeyCaiHelloWorld.m" />
-        <header-file src="src/ios/CDVUserLogin.h" />
-        <source-file src="src/ios/CDVUserLogin.m" />
+        <header-file src="src/ios/RockeyCaiLogin.h" />
+        <source-file src="src/ios/RockeyCaiLogin.m" />
         <source-file src="www/helloworld.html" target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>
     </platform>
 
