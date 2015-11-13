@@ -28,10 +28,24 @@
             <feature name="RockeyCaiHelloWorld">
                 <param name="ios-package" value="RockeyCaiHelloWorld" onload="true" />
             </feature>
+            <feature name="RockeyCaiLogin">
+                <param name="ios-package" value="RockeyCaiLogin" onload="true" />
+            </feature>
         </config-file>
-        
+
+        <js-module src="www/rockeycaihelloworld.js" name="RockeyCaiHelloWorld">
+            <clobbers target="RockeyCaiHelloWorld" />
+        </js-module>
+
+        <js-module src="www/rockeycailogin.js" name="RockeyCaiLogin">
+            <clobbers target="RockeyCaiLogin" />
+        </js-module>
+
+
         <header-file src="src/ios/RockeyCaiHelloWorld.h" />
         <source-file src="src/ios/RockeyCaiHelloWorld.m" />
+        <header-file src="src/ios/CDVUserLogin.h" />
+        <source-file src="src/ios/CDVUserLogin.m" />
         <source-file src="www/helloworld.html" target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>
     </platform>
 
