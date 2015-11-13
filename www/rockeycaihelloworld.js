@@ -7,7 +7,7 @@
     var RockeyCaiHelloWorld = exports;
 
     RockeyCaiHelloWorld.sayHello = function () {
-        exec(null, null, "RockeyCaiHelloWorld", "sayHello", null);
+        exec(null, null, "RockeyCaiHelloWorld", "sayHello", [null]);
     };
 
     RockeyCaiHelloWorld.sayHelloAndCallBack = function (data , cb) {

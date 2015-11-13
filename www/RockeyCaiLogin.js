@@ -19,7 +19,7 @@
             cb2Success(msg);
         }, function(error){
             cb2Error(error);
-        }, "RockeyCaiLogin", "getSaveUserInfoAction", null);
+        }, "RockeyCaiLogin", "getSaveUserInfoAction", [null]);
     };
 
     //退出登录
@@ -28,7 +28,7 @@
             cb2Success(msg);
         }, function(error){
             cb2Error(error);
-        }, "RockeyCaiLogin", "logoutAction", null);
+        }, "RockeyCaiLogin", "logoutAction", [null]);
     };
 
     //获取登录数据
@@ -37,7 +37,7 @@
             cb2Success(msg);
         }, function(error){
             cb2Error(error);
-        }, "RockeyCaiLogin", "getUserInfoAction", null);
+        }, "RockeyCaiLogin", "getUserInfoAction", [null]);
     };
 
     
