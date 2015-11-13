@@ -14,14 +14,6 @@
 		<engine name="cordova" version=">=3.0.0" />
 	</engines>
 
-    <js-module src="www/rockeycaihelloworld.js" name="RockeyCaiHelloWorld">
-    	<clobbers target="RockeyCaiHelloWorld" />
-    </js-module>
-
-    <html-module src="www/helloworld.html" name="RockeyCaiHelloWorld">
-    	<clobbers target="RockeyCaiHelloWorld" />
-    </html-module>
-
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
@@ -37,7 +29,7 @@
             <clobbers target="RockeyCaiHelloWorld" />
         </js-module>
 
-        <js-module src="www/rockeycailogin.js" name="RockeyCaiLogin">
+        <js-module src="www/RockeyCaiLogin.js" name="RockeyCaiLogin">
             <clobbers target="RockeyCaiLogin" />
         </js-module>
 
