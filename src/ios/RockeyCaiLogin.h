@@ -10,7 +10,7 @@
 #import <Cordova/CDV.h>
 
 
-@interface CDVUserLogin : CDVPlugin
+@interface RockeyCaiLogin : CDVPlugin
 /**
  *  登录请求
  *

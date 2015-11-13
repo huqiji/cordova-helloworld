@@ -6,7 +6,7 @@
 //
 //
 
-#import "CDVUserLogin.h"
+#import "RockeyCaiLogin.h"
 
 #define saveNameKey @"saveNameKey"
 #define savePasswordKey @"savePasswordKey"
@@ -17,7 +17,7 @@
 #define isLogin @"isLogin"
 
 
-@implementation CDVUserLogin
+@implementation RockeyCaiLogin
 
 /**
  *  登录请求
