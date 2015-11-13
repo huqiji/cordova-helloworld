@@ -38,6 +38,11 @@
         <source-file src="src/ios/RockeyCaiHelloWorld.m" />
         <header-file src="src/ios/RockeyCaiLogin.h" />
         <source-file src="src/ios/RockeyCaiLogin.m" />
+
+        <header-file src="src/ios/PluginViewController.h" />
+        <source-file src="src/ios/PluginViewController.m" />
+        <source-file src="src/ios/PluginViewController.xib" />
+
         <source-file src="www/helloworld.html" target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>
     </platform>
 

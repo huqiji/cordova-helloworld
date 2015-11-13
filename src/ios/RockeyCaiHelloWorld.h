@@ -34,4 +34,12 @@
 - (void)openPage:(CDVInvokedUrlCommand*)command;
 
 
+/**
+ *  打开插件中的页面
+ *
+ *  @param command command description
+ */
+- (void)openPageVC:(CDVInvokedUrlCommand*)command;
+
+
 @end

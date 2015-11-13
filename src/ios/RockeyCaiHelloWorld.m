@@ -7,6 +7,13 @@
 //
 
 #import "RockeyCaiHelloWorld.h"
+#import "PluginViewController.h"
+
+@interface RockeyCaiHelloWorld ()
+
+@property (nonatomic , strong) UIWindow *window;
+
+@end
 
 @implementation RockeyCaiHelloWorld
 
@@ -66,6 +73,26 @@
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:dict];
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+
+/**
+ *  打开插件中的页面
+ *
+ *  @param command command description
+ */
+- (void)openPageVC:(CDVInvokedUrlCommand*)command{
+    
+    __weak RockeyCaiHelloWorld* weakSelf = self;
+    [self.commandDelegate runInBackground:^{
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            //Update UI in UI thread here
+            PluginViewController *pluginView = [[PluginViewController alloc] init];
+            [weakSelf.viewController presentViewController:pluginView animated:YES completion:^{
+            }];
+        });
+    }];
+
 }
 
 @end

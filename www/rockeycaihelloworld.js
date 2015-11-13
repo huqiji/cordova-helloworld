@@ -20,3 +20,11 @@
             cb(msg)
         }, null, "RockeyCaiHelloWorld", "openPage", [data]);
     };
+
+
+    RockeyCaiHelloWorld.openPageVC = function (data , cb) {
+        exec(function(msg){
+            cb(msg)
+        }, null, "RockeyCaiHelloWorld", "openPageVC", [data]);
+    };
+
