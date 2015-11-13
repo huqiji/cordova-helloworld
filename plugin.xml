@@ -1,49 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:rim="http://www.blackberry.com/ns/widgets"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com-rockeycai-cordova-helloworld"
-    version="0.0.1">
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com-rockeycai-cordova-helloworld"
+        version="0.0.1">
     <name>RockeyCaiHelloWorld</name>
     <description>RockeyCai HelloWorld Cordova Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,RockeyCaiHelloWorld</keywords>
 
-	<engines>
-		<engine name="cordova" version=">=3.0.0" />
-	</engines>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/rockeycaihelloworld.js" name="RockeyCaiHelloWorld">
+        <clobbers target="RockeyCaiHelloWorld"/>
+    </js-module>
+
+    <js-module src="www/RockeyCaiLogin.js" name="RockeyCaiLogin">
+        <clobbers target="RockeyCaiLogin"/>
+    </js-module>
 
     <!-- ios -->
     <platform name="ios">
+
         <config-file target="config.xml" parent="/*">
             <feature name="RockeyCaiHelloWorld">
-                <param name="ios-package" value="RockeyCaiHelloWorld" onload="true" />
+                <param name="ios-package" value="RockeyCaiHelloWorld" onload="true"/>
             </feature>
             <feature name="RockeyCaiLogin">
-                <param name="ios-package" value="RockeyCaiLogin" onload="true" />
+                <param name="ios-package" value="RockeyCaiLogin" onload="true"/>
             </feature>
         </config-file>
 
-        <js-module src="www/rockeycaihelloworld.js" name="RockeyCaiHelloWorld">
-            <clobbers target="RockeyCaiHelloWorld" />
-        </js-module>
+        <header-file src="src/ios/RockeyCaiHelloWorld.h"/>
+        <source-file src="src/ios/RockeyCaiHelloWorld.m"/>
+        <header-file src="src/ios/RockeyCaiLogin.h"/>
+        <source-file src="src/ios/RockeyCaiLogin.m"/>
 
-        <js-module src="www/RockeyCaiLogin.js" name="RockeyCaiLogin">
-            <clobbers target="RockeyCaiLogin" />
-        </js-module>
+        <header-file src="src/ios/PluginViewController.h"/>
+        <source-file src="src/ios/PluginViewController.m"/>
+        <source-file src="src/ios/PluginViewController.xib"/>
 
-
-        <header-file src="src/ios/RockeyCaiHelloWorld.h" />
-        <source-file src="src/ios/RockeyCaiHelloWorld.m" />
-        <header-file src="src/ios/RockeyCaiLogin.h" />
-        <source-file src="src/ios/RockeyCaiLogin.m" />
-
-        <header-file src="src/ios/PluginViewController.h" />
-        <source-file src="src/ios/PluginViewController.m" />
-        <source-file src="src/ios/PluginViewController.xib" />
-
-        <source-file src="www/helloworld.html" target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>
+        <source-file src="www/helloworld.html"
+                     target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>
     </platform>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="RockeyCaiHelloWorld">
+                <param name="android-package" value="org.apache.cordova.rockeycai.RockeyCaiHelloWorld"/>
+                <param name="onload" value="true"/>
+            </feature>
+            <feature name="RockeyCaiLogin">
+                <param name="android-package" value="org.apache.cordova.rockeycai.RockeyCaiLogin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/RockeyCaiAppHpler.java" target-dir="src/org/apache/cordova/rockeycai"/>
+        <source-file src="src/android/RockeyCaiHelloWorld.java" target-dir="src/org/apache/cordova/rockeycai"/>
+        <source-file src="src/android/RockeyCaiLogin.java" target-dir="src/org/apache/cordova/rockeycai"/>
+
+        <source-file src="www/helloworld.html"
+                     target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>
+
+    </platform>
+
 
 </plugin>
