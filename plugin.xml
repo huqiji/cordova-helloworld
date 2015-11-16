@@ -43,8 +43,9 @@
         <source-file src="src/ios/PluginViewController.m"/>
         <source-file src="src/ios/PluginViewController.xib"/>
 
-        <source-file src="www/helloworld.html"
-                     target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>
+        <!--<source-file src="www/helloworld.html"-->
+        <!--target-dir="../../../platform_www/plugins/com-rockeycai-cordova-helloworld/www"/>-->
+
     </platform>
 
     <!-- android -->
@@ -65,10 +66,7 @@
         <source-file src="src/android/RockeyCaiHelloWorld.java" target-dir="src/org/apache/cordova/rockeycai"/>
         <source-file src="src/android/RockeyCaiLogin.java" target-dir="src/org/apache/cordova/rockeycai"/>
 
-        <source-file src="www/helloworld.html"
-                     target-dir="assets"/>
-
-
+        <!--<source-file src="www/helloworld.html" target-dir="assets/www"/>-->
     </platform>
 
 

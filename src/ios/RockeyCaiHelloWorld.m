@@ -68,7 +68,7 @@
     NSDictionary* dict = [command.arguments objectAtIndex:0];
     
     //设置返回值
-    dict = @{@"result" : @"openPage"};
+    dict = @{@"success" : @"1" , @"isType" : @"1" };
     
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:dict];
     

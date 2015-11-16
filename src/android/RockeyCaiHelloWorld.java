@@ -108,7 +108,9 @@ public class RockeyCaiHelloWorld extends CordovaPlugin {
 	System.out.println("--javaScript Call openPage----");
 	JSONObject jsonObject = new JSONObject();
 	// 设置返回值
-	jsonObject.put("result", "openPage");
+	jsonObject.put("success", "1");
+	jsonObject.put("isType", "2");
+	
 	callbackContext.success(jsonObject);
     }
     
